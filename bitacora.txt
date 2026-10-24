@@ -1,0 +1,22 @@
+Miniretos:
+1. Kilometro 0 : En la seccion de pasos cree los archivos y la primera pagina de rueda libre 
+luego la abri con live server y en Devtools en la seccion de network pude ver el principal el archivo con el codigo 304
+despues segui las instrucciones de añadir una ruta que no existia al link y me aparecio el siguiente mensaje "Cannot GET /index.html/promociones.html" 
+y el el documento del Devtools el archivo tenia el codigo 404
+
+2. Rol de HTML, CSS y JavaScript en el sitio de Rueda Libre
+
+HTML: define la estructura y el contenido de la página.
+Ejemplo: el título principal <h1>Rueda Libre</h1>, el párrafo de
+bienvenida y una lista <ul> con los tipos de bicicleta que se alquilan
+(urbana, de montaña, eléctrica).
+
+CSS: define el diseño y la apariencia visual del sitio.
+Ejemplo: poner los títulos en verde, elegir la tipografía, dar color de
+fondo a la cabecera y acomodar las tarjetas de bicicletas en columnas
+para que se vean bien en el celular.
+
+JavaScript: agrega interactividad y comportamiento.
+Ejemplo: un formulario de reserva que calcula el precio total según las
+horas de alquiler que elija el cliente, o un botón que muestra u oculta
+el catálogo de bicicletas.
