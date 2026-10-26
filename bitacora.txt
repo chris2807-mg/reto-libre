@@ -38,3 +38,6 @@ ya que considere que en ambas era mejor que el usuario viera todas las opciones 
 en cantidad de bicicletas puse un minimo de 1 y maximo de 2 para que el usuario pudiera colocar la cantidad, cree un espacio de comentarios con textarea y un checkbox 
 para que acepte las condiciones y luego al final agregue el boton de reservar
 
+Despues ahora agregue los limites o requerimientos, me costo un poco aprender el pattern o el max y min con los caracteres, utilice la IA para aclarar las dudas y ver 
+mas ejemplos antes de poderlo implementar en mi codigo entonces despues de varios ejemplos hice mi version y utilice todas las reglas que pusieron en el minireto 
+
