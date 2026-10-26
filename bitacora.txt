@@ -20,3 +20,9 @@ JavaScript: agrega interactividad y comportamiento.
 Ejemplo: un formulario de reserva que calcula el precio total según las
 horas de alquiler que elija el cliente, o un botón que muestra u oculta
 el catálogo de bicicletas.
+
+2. integue dos paginas adicionales a index.html y las concecte con el navegador para poder pasar de una a otra
+ya quedaron como tal una pagina navegable en rueda libre en el cual especifica los servicios de la tienda, condiciones
+y horarios de atencion junto con las formas de contacto y  la ubicacion hipotetica de la tienda con un enlace dirigido a maps
+utilice tablas y diferentes tipos de listas para poder reunir toda la informacion tal y como se solicitaba en cada reto 
+al final deje en cada pagina un footer en el que indica el año nombre de la empresa y el correo de contacto
