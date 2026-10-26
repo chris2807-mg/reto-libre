@@ -26,3 +26,9 @@ ya quedaron como tal una pagina navegable en rueda libre en el cual especifica l
 y horarios de atencion junto con las formas de contacto y  la ubicacion hipotetica de la tienda con un enlace dirigido a maps
 utilice tablas y diferentes tipos de listas para poder reunir toda la informacion tal y como se solicitaba en cada reto 
 al final deje en cada pagina un footer en el que indica el año nombre de la empresa y el correo de contacto
+
+
+DIA 2 
+Para la primera instruccion del dia 2 se me pide que ahora implemente etiquetas semanticas para organizar y dar estructura al codigo
+de la pagina entonces 
+
