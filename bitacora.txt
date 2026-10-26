@@ -30,5 +30,11 @@ al final deje en cada pagina un footer en el que indica el año nombre de la emp
 
 DIA 2 
 Para la primera instruccion del dia 2 se me pide que ahora implemente etiquetas semanticas para organizar y dar estructura al codigo
-de la pagina entonces 
+de la pagina entonces organizo todo el codigo en secciones aunque ya casi todo lo habia hecho asi desde un inicio.
+
+Luego la siguiente instruccion era ya hacer el formulario entonces comence con las secciones de nombre numero de documento, correo elecotronico y numero de celular
+despues va el alquiler en el que implemente el type date para que el usuario ponga la fecha, luego el radio para el tipo de bicicleta y el plan
+ya que considere que en ambas era mejor que el usuario viera todas las opciones directamente en vez de clickear como si fuera en select por ejemplo en recorrido guiado
+en cantidad de bicicletas puse un minimo de 1 y maximo de 2 para que el usuario pudiera colocar la cantidad, cree un espacio de comentarios con textarea y un checkbox 
+para que acepte las condiciones y luego al final agregue el boton de reservar
 
