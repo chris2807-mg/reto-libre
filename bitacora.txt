@@ -40,5 +40,13 @@ para que acepte las condiciones y luego al final agregue el boton de reservar
 
 Despues ahora agregue los limites o requerimientos, me costo un poco aprender el pattern o el max y min con los caracteres, utilice la IA para aclarar las dudas y ver 
 mas ejemplos antes de poderlo implementar en mi codigo entonces despues de varios ejemplos hice mi version y utilice todas las reglas que pusieron en el minireto 
+luego verifique la accesibilidad de todas las paginas y revise de nuevo los formularios, utilice IA para revisar errores y tambien mirar en la red que las secciones 
+y lo demas estuvieran bien organizados
+
+Dia 3
+
+Despues de haber establecido la paleta de colores de la pagina y haber creado la carpeta css con su archivo pude organizar mejor los colores y las etiquetas, me perdi 
+un poco con la estructura del archivo entonces revise conceptos y del tema con IA para poder escribir mejor el archivo y luego modifique todos los archvios de reserva 
+tarifas e index con los links que se enlazaran con el archivo de css resperando las jerarquias de las carpetas para que se enlacen y se puedan aplicar los requerimientos que puse
 
 
