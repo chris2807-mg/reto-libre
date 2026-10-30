@@ -48,5 +48,7 @@ Dia 3
 Despues de haber establecido la paleta de colores de la pagina y haber creado la carpeta css con su archivo pude organizar mejor los colores y las etiquetas, me perdi 
 un poco con la estructura del archivo entonces revise conceptos y del tema con IA para poder escribir mejor el archivo y luego modifique todos los archvios de reserva 
 tarifas e index con los links que se enlazaran con el archivo de css resperando las jerarquias de las carpetas para que se enlacen y se puedan aplicar los requerimientos que puse
+Para el siguiente minireto aplique variables y estilize el menu con la clase activo y cambie el boton de reserva, tambien en la parte de reserva organice mejor el formulario 
+y arregle un conflicto de especificidad con IA y pude poner el estado hover y focus y comprobe que en la pagina se viera en que seccion se encuentra uno 
 
 
