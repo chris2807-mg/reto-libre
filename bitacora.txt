@@ -41,3 +41,4 @@ para que acepte las condiciones y luego al final agregue el boton de reservar
 Despues ahora agregue los limites o requerimientos, me costo un poco aprender el pattern o el max y min con los caracteres, utilice la IA para aclarar las dudas y ver 
 mas ejemplos antes de poderlo implementar en mi codigo entonces despues de varios ejemplos hice mi version y utilice todas las reglas que pusieron en el minireto 
 
+
