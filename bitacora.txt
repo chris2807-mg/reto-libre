@@ -50,5 +50,13 @@ un poco con la estructura del archivo entonces revise conceptos y del tema con I
 tarifas e index con los links que se enlazaran con el archivo de css resperando las jerarquias de las carpetas para que se enlacen y se puedan aplicar los requerimientos que puse
 Para el siguiente minireto aplique variables y estilize el menu con la clase activo y cambie el boton de reserva, tambien en la parte de reserva organice mejor el formulario 
 y arregle un conflicto de especificidad con IA y pude poner el estado hover y focus y comprobe que en la pagina se viera en que seccion se encuentra uno 
-
-
+Despues organice el contenido para que no quedara pegado en los bordes junto con los article para separar las tarjetas y que ñas imagenes tambien se vean diferentes, 
+las tablas ahora tienen borde tambien le puse color al encabezado siguiendo la paleta de colores 
+Agregué una tarjeta para las bicicletas eléctricas con la etiqueta "Nuevo":
+la tarjeta lleva position: relative y la etiqueta position: absolute con
+top y right, así queda en la esquina sin mover el contenido. Puse el
+enlace de WhatsApp en las tres páginas con position: fixed abajo a la
+derecha y le di más padding-bottom al pie para que no tape el final.
+Revisé la consistencia de las tres páginas, agrupé selectores repetidos y
+organicé styles.css por secciones comentadas. En DevTools las
+declaraciones tachadas son las esperadas por especificidad

@@ -1,3 +1,4 @@
+
 :root {
     --color-verde-ruta: #1E7A4F;
     --color-naranja-pedal: #F39A2B;
@@ -12,27 +13,47 @@
     --espacio-sm: 1rem;
     --espacio-md: 1.5rem;
     --espacio-lg: 2.5rem;
+    --espacio-xl: 5rem;
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-family: var(--fuente-texto);
     color: var(--color-azul-noche);
     background-color: var(--color-crema);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--fuente-titulos);
     font-weight: 700;
 }
 
-header {
-    background-color: var(--color-azul-noche);
-    color: var(--color-crema);
-    padding: var(--espacio-sm) var(--espacio-md);
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-a {
-    color: var(--color-verde-ruta);
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: var(--espacio-md);
+}
+
+section {
+    margin-bottom: var(--espacio-lg);
 }
 
 strong {
@@ -40,22 +61,40 @@ strong {
     color: var(--color-azul-noche);
 }
 
-footer {
-    color: var(--color-gris-asfalto);
-    padding: var(--espacio-md);
+
+a {
+    color: var(--color-verde-ruta);
 }
 
-footer a {
-    color: var(--color-gris-asfalto);
+a:hover {
+    color: var(--color-azul-noche);
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-verde-ruta);
+    outline-offset: 0.125rem;
+}
+
+
+
+header {
+    background-color: var(--color-azul-noche);
+    color: var(--color-crema);
+    padding: var(--espacio-sm) var(--espacio-md);
 }
 
 #menu {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espacio-xs);
     margin: 0;
     padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin-right: var(--espacio-xs);
 }
 
 #menu a {
@@ -79,21 +118,75 @@ footer a {
 
 #menu a:focus {
     outline: 3px solid var(--color-crema);
-    outline-offset: 2px;
+    outline-offset: 0.125rem;
 }
 
-a:hover {
+
+
+.portada {
+    display: block;
+    width: 100%;
+    min-height: 50vh;
+    object-fit: cover;
+    margin-bottom: var(--espacio-lg);
+}
+
+
+article {
+    position: relative;
+    width: 100%;
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.5rem;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article img {
+    display: block;
+    width: 100%;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: -0.75rem;
+    right: var(--espacio-md);
+    padding: 0 var(--espacio-xs);
+    border-radius: 0.25rem;
+    background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
+    font-weight: 600;
 }
 
-a:focus {
-    outline: 3px solid var(--color-verde-ruta);
-    outline-offset: 2px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espacio-md);
 }
 
-.btn-cta {
-    display: inline-block;
-    padding: var(--espacio-xs) var(--espacio-md);
+caption {
+    padding: var(--espacio-sm);
+    font-weight: 600;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--espacio-sm);
+    border: 1px solid var(--color-gris-asfalto);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-azul-noche);
+    color: var(--color-crema);
+}
+
+.btn-cta,
+.enlace-whatsapp {
     background-color: var(--color-verde-ruta);
     color: var(--color-crema);
     font-weight: 600;
@@ -101,15 +194,87 @@ a:focus {
     border-radius: 0.25rem;
 }
 
+.btn-cta {
+    display: inline-block;
+    padding: var(--espacio-xs) var(--espacio-md);
+}
+
+
+.enlace-whatsapp {
+    position: fixed;
+    right: var(--espacio-sm);
+    bottom: var(--espacio-sm);
+    z-index: 10;
+    padding: var(--espacio-sm) var(--espacio-md);
+}
+
 .btn-cta:hover,
-.btn-cta:focus {
+.btn-cta:focus,
+.enlace-whatsapp:hover,
+.enlace-whatsapp:focus {
     background-color: var(--color-naranja-pedal);
     color: var(--color-azul-noche);
 }
 
-.btn-cta:focus {
+.btn-cta:focus,
+.enlace-whatsapp:focus {
     outline: 3px solid var(--color-azul-noche);
-    outline-offset: 3px;
+    outline-offset: 0.2rem;
+}
+
+
+footer {
+    color: var(--color-gris-asfalto);
+    padding: var(--espacio-md);
+    /* Deja libre la zona que cubre el enlace flotante de WhatsApp */
+    padding-bottom: var(--espacio-xl);
+}
+
+footer a {
+    color: var(--color-gris-asfalto);
+}
+
+
+
+fieldset {
+    min-width: 0;
+    margin: 0 0 var(--espacio-md);
+    padding: var(--espacio-md);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.5rem;
+}
+
+legend {
+    padding: 0 var(--espacio-xs);
+    font-weight: 600;
+}
+
+fieldset p {
+    margin: 0 0 var(--espacio-sm);
+}
+
+input,
+select,
+textarea {
+    font-family: var(--fuente-texto);
+    color: var(--color-azul-noche);
+    border: 2px solid var(--color-gris-asfalto);
+    border-radius: 0.25rem;
+    padding: var(--espacio-xs);
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: var(--espacio-xs);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-verde-ruta);
 }
 
 button {
@@ -117,7 +282,7 @@ button {
     color: var(--color-crema);
     font-family: var(--fuente-texto);
     font-weight: 600;
-    padding: var(--espacio-xs) var(--espacio-md);
+    padding: var(--espacio-sm) var(--espacio-lg);
     border: 2px solid var(--color-verde-ruta);
     border-radius: 0.25rem;
     cursor: pointer;
@@ -132,30 +297,5 @@ button:focus {
 
 button:focus {
     outline: 3px solid var(--color-naranja-pedal);
-    outline-offset: 3px;
-}
-
-input,
-select,
-textarea {
-    font-family: var(--fuente-texto);
-    color: var(--color-azul-noche);
-    border: 2px solid var(--color-gris-asfalto);
-    border-radius: 0.25rem;
-    padding: 0.25rem var(--espacio-xs);
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid var(--color-verde-ruta);
-    outline-offset: 2px;
-    border-color: var(--color-verde-ruta);
-}
-
-
-textarea {
-    display: block;
-    max-width: 100%;
-    margin-top: var(--espacio-xs);
+    outline-offset: 0.2rem;
 }
