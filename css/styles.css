@@ -1,30 +1,12 @@
-/* ==========================================================
-   Rueda Libre - Hoja de estilos
-   Secciones:
-     1. Variables
-     2. Base
-     3. Navegación (encabezado y menú)
-     4. Componentes (incluye el pie de página)
-     5. Formulario
-   ========================================================== */
-
-
-/* ----------------------------------------------------------
-   1. VARIABLES
-   ---------------------------------------------------------- */
+/* 1. VARIABLES */
 :root {
-    /* Colores de marca */
     --color-verde-ruta: #1E7A4F;
     --color-naranja-pedal: #F39A2B;
     --color-azul-noche: #14213D;
     --color-crema: #FAF6EF;
     --color-gris-asfalto: #5B6470;
-
-    /* Tipografías, cada una con fuente de respaldo */
     --fuente-titulos: "Montserrat", Arial, sans-serif;
     --fuente-texto: "Open Sans", Arial, sans-serif;
-
-    /* Escala de espaciado */
     --espacio-xs: 0.5rem;
     --espacio-sm: 1rem;
     --espacio-md: 1.5rem;
@@ -32,12 +14,7 @@
     --espacio-xl: 5rem;
 }
 
-
-/* ----------------------------------------------------------
-   2. BASE
-   ---------------------------------------------------------- */
-
-/* El ancho de cada elemento incluye relleno y borde */
+/* 2. BASE */
 *,
 *::before,
 *::after {
@@ -81,7 +58,6 @@ strong {
     color: var(--color-azul-noche);
 }
 
-/* Enlaces */
 a {
     color: var(--color-verde-ruta);
 }
@@ -90,7 +66,6 @@ a:hover {
     color: var(--color-azul-noche);
 }
 
-/* Indicador de foco compartido por enlaces y campos */
 a:focus,
 input:focus,
 select:focus,
@@ -99,40 +74,28 @@ textarea:focus {
     outline-offset: 0.125rem;
 }
 
-
-/* ----------------------------------------------------------
-   3. NAVEGACIÓN
-   ---------------------------------------------------------- */
-
-/* ENCABEZADO con Flexbox.
-   Contenedor flexible: header. Elementos flexibles: sus hijos
-   directos (el nombre o logo, y el nav). */
+/* 3. NAVEGACIÓN */
 header {
     display: flex;
-    flex-direction: row;               /* eje principal horizontal (es el valor por defecto) */
-    justify-content: space-between;    /* nombre en un extremo y menú en el otro */
-    align-items: center;               /* centrados verticalmente entre sí */
-    flex-wrap: wrap;                   /* si no caben en una línea, el menú baja bajo el nombre */
-    gap: var(--espacio-sm);            /* separación mínima entre nombre y menú */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
     background-color: var(--color-azul-noche);
     color: var(--color-crema);
     padding: var(--espacio-sm) var(--espacio-md);
 }
 
-/* MENÚ con Flexbox.
-   Contenedor flexible: el ul. Elementos flexibles: los li.
-   gap reemplaza al margin-right y al inline-block de la semana 1. */
 #menu {
     display: flex;
-    flex-wrap: wrap;                   /* los enlaces pasan a otra línea cuando no caben */
-    gap: var(--espacio-xs);            /* separación uniforme entre enlaces */
-    list-style: none;                  /* quita las viñetas */
-    margin: 0;                         /* quita el margen que el navegador pone al ul */
+    flex-wrap: wrap;
+    gap: var(--espacio-xs);
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-/* display: block hace que el relleno del enlace ocupe espacio real,
-   sin necesitar inline-block */
 #menu a {
     display: block;
     padding: var(--espacio-xs) var(--espacio-sm);
@@ -146,8 +109,6 @@ header {
     text-decoration: underline;
 }
 
-/* Van después de ".activo": las dos reglas valen (1,1,1) y en un
-   empate gana la última */
 #menu a:hover,
 #menu a:focus {
     background-color: var(--color-naranja-pedal);
@@ -159,12 +120,7 @@ header {
     outline-offset: 0.125rem;
 }
 
-
-/* ----------------------------------------------------------
-   4. COMPONENTES
-   ---------------------------------------------------------- */
-
-/* Portada de inicio */
+/* 4. COMPONENTES */
 .portada {
     display: block;
     width: 100%;
@@ -173,9 +129,6 @@ header {
     margin-bottom: var(--espacio-lg);
 }
 
-/* Tarjetas de servicios.
-   position: relative convierte cada tarjeta en el punto de
-   referencia de la etiqueta "Nuevo" */
 article {
     position: relative;
     width: 100%;
@@ -194,8 +147,6 @@ article img {
     width: 100%;
 }
 
-/* Etiqueta "Nuevo": position: absolute la saca del flujo, así que
-   no desplaza el contenido de la tarjeta */
 .etiqueta-nuevo {
     position: absolute;
     top: -0.75rem;
@@ -207,7 +158,6 @@ article img {
     font-weight: 600;
 }
 
-/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -232,8 +182,6 @@ thead th {
     color: var(--color-crema);
 }
 
-/* Enlaces con apariencia de botón (llamada a la acción y WhatsApp):
-   lo que comparten va agrupado */
 .btn-cta,
 .enlace-whatsapp {
     background-color: var(--color-verde-ruta);
@@ -248,8 +196,6 @@ thead th {
     padding: var(--espacio-xs) var(--espacio-md);
 }
 
-/* Enlace de WhatsApp siempre visible: position: fixed lo ancla a la
-   ventana y se queda en la esquina inferior derecha al hacer scroll */
 .enlace-whatsapp {
     position: fixed;
     right: var(--espacio-sm);
@@ -272,36 +218,53 @@ thead th {
     outline-offset: 0.2rem;
 }
 
-/* PIE DE PÁGINA con Flexbox.
-   Contenedor flexible: footer. Elementos flexibles: sus tres hijos
-   directos (marca, contacto y horario). */
+.flota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: var(--espacio-md);
+    align-items: stretch;
+}
+
+.flota-grid article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.flota-grid img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: var(--espacio-sm);
+}
+
+.flota-grid .btn-cta {
+    margin-top: var(--espacio-sm);
+    text-align: center;
+}
+
 footer {
     display: flex;
-    flex-direction: row;               /* los tres bloques en fila */
-    justify-content: space-between;    /* separados de forma uniforme: el primero y el último tocan los extremos */
-    align-items: flex-start;           /* alineados por arriba (no estirados ni centrados) */
-    flex-wrap: wrap;                   /* en pantallas estrechas los bloques bajan de línea */
-    gap: var(--espacio-md);            /* separación mínima entre bloques y entre líneas */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--espacio-md);
     color: var(--color-gris-asfalto);
     padding: var(--espacio-md);
-    /* Deja libre la zona que cubre el enlace flotante de WhatsApp */
     padding-bottom: var(--espacio-xl);
 }
 
-/* Los tres bloques sin márgenes por defecto, para que queden
-   alineados por arriba exactamente */
 footer p,
 footer address,
 footer dl {
     margin: 0;
 }
 
-/* address viene en cursiva por defecto en el navegador */
 footer address {
     font-style: normal;
 }
 
-/* dd trae un margen izquierdo por defecto */
 footer dd {
     margin-left: 0;
 }
@@ -314,10 +277,7 @@ footer a {
     color: var(--color-gris-asfalto);
 }
 
-
-/* ----------------------------------------------------------
-   5. FORMULARIO
-   ---------------------------------------------------------- */
+/* 5. FORMULARIO */
 fieldset {
     min-width: 0;
     margin: 0 0 var(--espacio-md);

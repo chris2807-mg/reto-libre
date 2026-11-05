@@ -74,3 +74,9 @@ contenedor flexible con gap y flex-wrap: wrap, y quité el margin-right y
 el inline-block de los li. Agregué al pie un tercer bloque (horario) y lo
 hice flexible en fila: marca, contacto y horario, alineados por arriba
 (align-items: flex-start) y separados con space-between
+Agregué la sección “Nuestra flota” en index.html, con una tarjeta por cada
+ modelo de bicicleta: foto, nombre, descripción, precio por hora y un botón “Reservar”.
+Con CSS Grid acomodé las tarjetas en una cuadrícula responsiva con repeat(auto-fit, minmax) y gap. 
+Con Flexbox (flex-direction: column y justify-content: space-between) ordené el contenido de cada tarjeta.
+ La info queda arriba y el botón siempre abajo, así que todas las tarjetas de una fila miden lo mismo.
+ Utilice la IA para las medidas de los px y como podia organizar las targetas de cada bicicleta
