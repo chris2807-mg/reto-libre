@@ -60,3 +60,17 @@ derecha y le di más padding-bottom al pie para que no tape el final.
 Revisé la consistencia de las tres páginas, agrupé selectores repetidos y
 organicé styles.css por secciones comentadas. En DevTools las
 declaraciones tachadas son las esperadas por especificidad
+
+
+
+
+SEMANA 2 
+
+DIA 1
+Convertí el header en contenedor flexible con justify-content:
+space-between y align-items: center: el nombre o logo queda en un extremo
+y el menú en el otro, centrados verticalmente. Convertí el ul del menú en
+contenedor flexible con gap y flex-wrap: wrap, y quité el margin-right y
+el inline-block de los li. Agregué al pie un tercer bloque (horario) y lo
+hice flexible en fila: marca, contacto y horario, alineados por arriba
+(align-items: flex-start) y separados con space-between
