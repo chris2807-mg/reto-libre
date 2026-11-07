@@ -23,127 +23,144 @@
     </header>
     <main>
         <h1>Reserva tu bicicleta</h1>
-        <section>
-            <h2>Formulario de reserva</h2>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Tus datos</legend>
-
-                    <p>
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required
-                            minlength="3"
-                            title="Escribe tu nombre completo (mínimo 3 caracteres)">
-                    </p>
-
-                    <p>
-                        <label for="num-documento">Número de documento:</label>
-                        <input type="text" id="num-documento" name="num-documento" placeholder="Tu número de documento" required
-                            pattern="[0-9]{6,10}"
-                            title="Solo números, entre 6 y 10 dígitos. Ejemplo: 1037123456">
-                    </p>
-
-                    <p>
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required
-                            title="Escribe un correo válido. Ejemplo: nombre@correo.com">
-                    </p>
-
-                    <p>
-                        <label for="telefono">Número de celular:</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de celular" required
-                            pattern="3[0-9]{9}"
-                            title="10 dígitos y debe empezar por 3. Ejemplo: 3001234567">
-                    </p>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Tu alquiler</legend>
-
-                    <p>
-                        <label for="fecha">Fecha del alquiler:</label>
-                        <input type="date" id="fecha" name="fecha" required
-                            min="2026-11-01" max="2026-12-31"
-                            title="Elige una fecha entre el 1 de noviembre y el 31 de diciembre de 2026">
-                    </p>
-
+        <div class="reservas-layout">
+            <section>
+                <h2>Formulario de reserva</h2>
+                <form action="#" method="post">
                     <fieldset>
-                        <legend>Tipo de bicicleta</legend>
+                        <legend>Tus datos</legend>
+
                         <p>
-                            <input type="radio" id="tipo-urbana" name="tipo-bicicleta" value="urbana" required>
-                            <label for="tipo-urbana">Urbana</label>
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required
+                                minlength="3"
+                                title="Escribe tu nombre completo (mínimo 3 caracteres)">
                         </p>
+
+                        <div class="fila-campos">
+                            <p>
+                                <label for="num-documento">Número de documento:</label>
+                                <input type="text" id="num-documento" name="num-documento" placeholder="Tu número de documento" required
+                                    pattern="[0-9]{6,10}"
+                                    title="Solo números, entre 6 y 10 dígitos. Ejemplo: 1037123456">
+                            </p>
+
+                            <p>
+                                <label for="telefono">Número de celular:</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de celular" required
+                                    pattern="3[0-9]{9}"
+                                    title="10 dígitos y debe empezar por 3. Ejemplo: 3001234567">
+                            </p>
+                        </div>
+
                         <p>
-                            <input type="radio" id="tipo-montana" name="tipo-bicicleta" value="montana">
-                            <label for="tipo-montana">Montaña</label>
-                        </p>
-                        <p>
-                            <input type="radio" id="tipo-electrica" name="tipo-bicicleta" value="electrica">
-                            <label for="tipo-electrica">Eléctrica</label>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required
+                                title="Escribe un correo válido. Ejemplo: nombre@correo.com">
                         </p>
                     </fieldset>
 
                     <fieldset>
-                        <legend>Plan</legend>
+                        <legend>Tu alquiler</legend>
+
                         <p>
-                            <input type="radio" id="plan-hora" name="plan" value="1-hora" required>
-                            <label for="plan-hora">1 hora</label>
+                            <label for="fecha">Fecha del alquiler:</label>
+                            <input type="date" id="fecha" name="fecha" required
+                                min="2026-11-01" max="2026-12-31"
+                                title="Elige una fecha entre el 1 de noviembre y el 31 de diciembre de 2026">
                         </p>
+
+                        <fieldset>
+                            <legend>Tipo de bicicleta</legend>
+                            <p>
+                                <input type="radio" id="tipo-urbana-clasica" name="tipo-bicicleta" value="urbana-clasica" required>
+                                <label for="tipo-urbana-clasica">Urbana Clásica</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tipo-urbana-plegable" name="tipo-bicicleta" value="urbana-plegable">
+                                <label for="tipo-urbana-plegable">Urbana Plegable</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tipo-montana-trail" name="tipo-bicicleta" value="montana-trail">
+                                <label for="tipo-montana-trail">Montaña Trail</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tipo-gravel-aventura" name="tipo-bicicleta" value="gravel-aventura">
+                                <label for="tipo-gravel-aventura">Gravel Aventura</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tipo-electrica-urbana" name="tipo-bicicleta" value="electrica-urbana">
+                                <label for="tipo-electrica-urbana">Eléctrica Urbana</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tipo-infantil" name="tipo-bicicleta" value="infantil">
+                                <label for="tipo-infantil">Infantil</label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Plan</legend>
+                            <p>
+                                <input type="radio" id="plan-hora" name="plan" value="1-hora" required>
+                                <label for="plan-hora">1 hora</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="plan-medio-dia" name="plan" value="medio-dia">
+                                <label for="plan-medio-dia">Medio día (4 h)</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="plan-dia" name="plan" value="dia-completo">
+                                <label for="plan-dia">Día completo</label>
+                            </p>
+                        </fieldset>
+
                         <p>
-                            <input type="radio" id="plan-medio-dia" name="plan" value="medio-dia">
-                            <label for="plan-medio-dia">Medio día (4 h)</label>
+                            <label for="cantidad">Cantidad de bicicletas:</label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required
+                                title="Puedes reservar entre 1 y 6 bicicletas">
                         </p>
+
                         <p>
-                            <input type="radio" id="plan-dia" name="plan" value="dia-completo">
-                            <label for="plan-dia">Día completo</label>
+                            <label for="recorrido">Recorrido guiado:</label>
+                            <select id="recorrido" name="recorrido">
+                                <option value="ninguno">Ninguno</option>
+                                <option value="rio-parques">Río y Parques</option>
+                                <option value="sabores-barrio">Sabores de Barrio</option>
+                                <option value="reto-las-palmas">Reto Las Palmas</option>
+                            </select>
                         </p>
                     </fieldset>
 
-                    <p>
-                        <label for="cantidad">Cantidad de bicicletas:</label>
-                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required
-                            title="Puedes reservar entre 1 y 6 bicicletas">
-                    </p>
+                    <fieldset>
+                        <legend>Confirmación</legend>
 
-                    <p>
-                        <label for="recorrido">Recorrido guiado:</label>
-                        <select id="recorrido" name="recorrido">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="rio-parques">Río y Parques</option>
-                            <option value="sabores-barrio">Sabores de Barrio</option>
-                            <option value="reto-las-palmas">Reto Las Palmas</option>
-                        </select>
-                    </p>
-                </fieldset>
+                        <p>
+                            <label for="comentarios">Déjanos tu comentario (opcional, máximo 300 caracteres):</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="300"></textarea>
+                        </p>
 
-                <fieldset>
-                    <legend>Confirmación</legend>
+                        <p>
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto las políticas de alquiler</label>
+                        </p>
+                    </fieldset>
 
-                    <p>
-                        <label for="comentarios">Déjanos tu comentario (opcional, máximo 300 caracteres):</label>
-                        <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="300"></textarea>
-                    </p>
+                    <button type="submit" name="reservar">Reservar</button>
+                </form>
+            </section>
+            <aside>
+                <h2>Contacto</h2>
+                <p>Contáctanos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a> si tienes dudas.</p>
+                <h3>Horario de atención</h3>
+                <dl>
+                    <dt>Lunes a viernes</dt>
+                    <dd>7:00 a. m. - 7:00 p. m.</dd>
 
-                    <p>
-                        <input type="checkbox" id="terminos" name="terminos" required>
-                        <label for="terminos">Acepto las políticas de alquiler</label>
-                    </p>
-                </fieldset>
-
-                <button type="submit" name="reservar">Reservar</button>
-            </form>
-        </section>
-        <p>Contáctanos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a> si tienes dudas.</p>
-        <aside>
-            <h2>Horario de atención</h2>
-            <dl>
-                <dt>Lunes a viernes</dt>
-                <dd>7:00 a. m. - 7:00 p. m.</dd>
-
-                <dt>Sábados, domingos y festivos</dt>
-                <dd>6:00 a. m. - 2:00 p. m.</dd>
-            </dl>
-        </aside>
+                    <dt>Sábados, domingos y festivos</dt>
+                    <dd>6:00 a. m. - 2:00 p. m.</dd>
+                </dl>
+            </aside>
+        </div>
     </main>
     <footer>
         <p>&copy; Rueda Libre 2026</p>

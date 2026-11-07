@@ -243,6 +243,78 @@ thead th {
     text-align: center;
 }
 
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacio-lg);
+}
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--espacio-md);
+}
+
+.hero-texto h2,
+.hero-texto p {
+    margin: 0;
+}
+
+.hero .portada {
+    margin-bottom: 0;
+}
+
+.rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-md);
+}
+
+.rutas-grid article {
+    margin-bottom: 0;
+}
+
+.rutas-grid img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: var(--espacio-sm);
+}
+
+.reservas-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--espacio-lg);
+    align-items: start;
+}
+
+.reservas-layout aside {
+    padding: var(--espacio-md);
+    border: 1px solid var(--color-gris-asfalto);
+    border-radius: 0.5rem;
+}
+
+.reservas-layout aside h2 {
+    margin-top: 0;
+}
+
+.reservas-layout aside dl,
+.reservas-layout aside dd {
+    margin: 0;
+}
+
+.reservas-layout aside dt {
+    font-weight: 600;
+}
+
+@media (max-width: 48rem) {
+    .hero,
+    .rutas-grid,
+    .reservas-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -293,6 +365,16 @@ legend {
 
 fieldset p {
     margin: 0 0 var(--espacio-sm);
+}
+
+.fila-campos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--espacio-md);
+}
+
+.fila-campos p {
+    flex: 1 1 12rem;
 }
 
 input,
