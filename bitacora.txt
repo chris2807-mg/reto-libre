@@ -80,3 +80,13 @@ Con CSS Grid acomodé las tarjetas en una cuadrícula responsiva con repeat(auto
 Con Flexbox (flex-direction: column y justify-content: space-between) ordené el contenido de cada tarjeta.
  La info queda arriba y el botón siempre abajo, así que todas las tarjetas de una fila miden lo mismo.
  Utilice la IA para las medidas de los px y como podia organizar las targetas de cada bicicleta
+
+Construí el layout de escritorio de Rueda Libre combinando Grid y Flexbox según lo que necesitaba cada caso.
+En la portada del inicio usé Grid con 1fr 1fr para poner el texto a la izquierda y la foto a la derecha,
+ y dentro del bloque de texto usé Flexbox con justify-content: center para centrarlo verticalmente.
+En la galería “Nuestras rutas” usé Grid con repeat(3, 1fr) y gap para mostrar tres tarjetas iguales en una fila. 
+En reservas usé Grid con 2fr 1fr para que el formulario ocupe dos tercios y la información de contacto un tercio,
+ y usé Flexbox con flex-wrap para poner documento y celular en la misma fila, porque son dos campos en una sola dimensión.
+ Mantuve Flexbox en el encabezado y el pie, ya que son bloques que se acomodan en una sola fila con justify-content: space-between.
+ Además, agregué un @media para que las columnas pasen a una sola en pantallas pequeñas, y actualicé el formulario de reservas para que ofrezca los mismos 6 tipos de bicicleta de la flota.
+ Comprobé que el menú, cabe aclarar que en esta parte utilice la IA para saber cual era mejor usar entre flexbox o grid en la parte del formulario y tambien me ayudo a organizar el codigo
