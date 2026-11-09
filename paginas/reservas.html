@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between align-items-center gap-3 p-3 px-md-4 text-center text-md-start">
-        <img class="logo" src="../img/logo.jpg" alt="Logo de Rueda Libre" width="88" height="88">
-        <nav>
-            <ul id="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html">Tarifas y Rutas</a></li>
-                <li><a class="activo" href="reservas.html">Reservas</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.jpg" alt="Logo de Rueda Libre" width="88" height="88"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifas.html">Tarifas y Rutas</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="reservas.html">Reservas</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="container py-4">
@@ -147,7 +154,7 @@
                             </p>
                         </fieldset>
 
-                        <button type="submit" name="reservar">Reservar</button>
+                        <button class="btn btn-success btn-lg" type="submit" name="reservar">Reservar</button>
                     </form>
                 </section>
             </div>
@@ -180,7 +187,7 @@
             <dd>6:00 a. m. - 2:00 p. m.</dd>
         </dl>
     </footer>
-    <a class="enlace-whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -71,7 +71,7 @@ a:hover {
     color: var(--color-azul-noche);
 }
 
-a:focus,
+a:focus-visible,
 input:focus,
 select:focus,
 textarea:focus {
@@ -80,11 +80,6 @@ textarea:focus {
 }
 
 /* 3. NAVEGACIÓN */
-header {
-    background-color: var(--color-azul-noche);
-    color: var(--color-crema);
-}
-
 .logo {
     width: 5.5rem;
     height: 5.5rem;
@@ -92,44 +87,17 @@ header {
     border-radius: 50%;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--espacio-xs);
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar[data-bs-theme="dark"] {
+    --bs-navbar-color: var(--color-crema);
+    --bs-navbar-hover-color: var(--color-naranja-pedal);
+    --bs-navbar-active-color: var(--color-naranja-pedal);
+    --bs-navbar-brand-color: var(--color-crema);
+    --bs-navbar-brand-hover-color: var(--color-naranja-pedal);
 }
 
-#menu a {
-    display: block;
-    padding: var(--espacio-xs);
-    color: var(--color-crema);
-    text-decoration: none;
-}
-
-#menu a.activo {
-    color: var(--color-naranja-pedal);
+.navbar .nav-link.active {
     font-weight: 600;
     text-decoration: underline;
-}
-
-#menu a:hover,
-#menu a:focus {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-azul-noche);
-}
-
-#menu a:focus {
-    outline: 3px solid var(--color-crema);
-    outline-offset: 0.125rem;
-}
-
-@media (min-width: 768px) {
-    #menu a {
-        padding: var(--espacio-xs) var(--espacio-sm);
-    }
 }
 
 /* 4. COMPONENTES */
@@ -200,40 +168,38 @@ thead th {
     color: var(--color-crema);
 }
 
-.btn-cta,
-.enlace-whatsapp {
-    background-color: var(--color-verde-ruta);
-    color: var(--color-crema);
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 0.25rem;
+.btn-success {
+    --bs-btn-bg: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: var(--color-naranja-pedal);
+    --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: var(--color-naranja-pedal);
+    --bs-btn-active-border-color: var(--color-naranja-pedal);
 }
 
-.btn-cta {
-    display: inline-block;
-    padding: var(--espacio-xs) var(--espacio-md);
+.btn-outline-success {
+    --bs-btn-color: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: var(--color-naranja-pedal);
+    --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: var(--color-naranja-pedal);
+    --bs-btn-active-border-color: var(--color-naranja-pedal);
 }
 
-.enlace-whatsapp {
-    position: fixed;
-    right: var(--espacio-sm);
-    bottom: var(--espacio-sm);
-    z-index: 10;
-    padding: var(--espacio-sm) var(--espacio-md);
-}
-
-.btn-cta:hover,
-.btn-cta:focus,
-.enlace-whatsapp:hover,
-.enlace-whatsapp:focus {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-azul-noche);
-}
-
-.btn-cta:focus,
-.enlace-whatsapp:focus {
-    outline: 3px solid var(--color-azul-noche);
-    outline-offset: 0.2rem;
+.btn-warning {
+    --bs-btn-color: var(--color-azul-noche);
+    --bs-btn-bg: var(--color-naranja-pedal);
+    --bs-btn-border-color: var(--color-naranja-pedal);
+    --bs-btn-hover-color: var(--color-azul-noche);
+    --bs-btn-hover-bg: var(--color-crema);
+    --bs-btn-hover-border-color: var(--color-crema);
+    --bs-btn-active-color: var(--color-azul-noche);
+    --bs-btn-active-bg: var(--color-crema);
+    --bs-btn-active-border-color: var(--color-crema);
 }
 
 footer {
@@ -317,29 +283,6 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: var(--color-verde-ruta);
-}
-
-button {
-    background-color: var(--color-verde-ruta);
-    color: var(--color-crema);
-    font-family: var(--fuente-texto);
-    font-weight: 600;
-    padding: var(--espacio-sm) var(--espacio-lg);
-    border: 2px solid var(--color-verde-ruta);
-    border-radius: 0.25rem;
-    cursor: pointer;
-}
-
-button:hover,
-button:focus {
-    background-color: var(--color-azul-noche);
-    border-color: var(--color-azul-noche);
-    color: var(--color-crema);
-}
-
-button:focus {
-    outline: 3px solid var(--color-naranja-pedal);
-    outline-offset: 0.2rem;
 }
 
 @media (min-width: 768px) {
