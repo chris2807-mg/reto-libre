@@ -15,6 +15,7 @@
     --bs-body-color: var(--color-azul-noche);
     --bs-body-bg: var(--color-crema);
     --bs-heading-color: var(--color-azul-noche);
+    --bs-border-color: var(--color-gris-asfalto);
     --bs-body-font-family: var(--fuente-texto);
     --bs-link-color-rgb: 30, 122, 79;
     --bs-link-hover-color-rgb: 20, 33, 61;
@@ -53,12 +54,6 @@ img {
     height: auto;
 }
 
-main {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: var(--espacio-sm);
-}
-
 section {
     margin-bottom: var(--espacio-lg);
 }
@@ -84,22 +79,17 @@ textarea:focus {
     outline-offset: 0.125rem;
 }
 
-@media (min-width: 768px) {
-    main {
-        padding: var(--espacio-md);
-    }
-}
-
 /* 3. NAVEGACIÓN */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--espacio-sm);
     background-color: var(--color-azul-noche);
     color: var(--color-crema);
-    padding: var(--espacio-sm);
-    text-align: center;
+}
+
+.logo {
+    width: 5.5rem;
+    height: 5.5rem;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 #menu {
@@ -137,14 +127,6 @@ header {
 }
 
 @media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: var(--espacio-sm) var(--espacio-md);
-        text-align: left;
-    }
-
     #menu a {
         padding: var(--espacio-xs) var(--espacio-sm);
     }
@@ -174,6 +156,10 @@ section > article h3 {
 section > article img {
     display: block;
     width: 100%;
+    max-width: 24rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: var(--espacio-sm);
 }
 
 .etiqueta-nuevo {
@@ -187,7 +173,6 @@ section > article img {
     font-weight: 600;
 }
 
-/* Solo tarifas.html: tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -196,7 +181,9 @@ table {
 }
 
 caption {
+    caption-side: top;
     padding: var(--espacio-xs);
+    color: var(--color-azul-noche);
     font-weight: 600;
     text-align: left;
 }
@@ -249,39 +236,8 @@ thead th {
     outline-offset: 0.2rem;
 }
 
-/* Solo reservas.html: distribucion 2:1 */
-.reservas-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacio-lg);
-}
-
-.reservas-layout aside {
-    padding: var(--espacio-md);
-    border: 1px solid var(--color-gris-asfalto);
-    border-radius: 0.5rem;
-}
-
-.reservas-layout aside h2 {
-    margin-top: 0;
-}
-
-.reservas-layout aside dl,
-.reservas-layout aside dd {
-    margin: 0;
-}
-
-.reservas-layout aside dt {
-    font-weight: 600;
-}
-
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--espacio-md);
     color: var(--color-gris-asfalto);
-    padding: var(--espacio-md);
     padding-bottom: var(--espacio-xl);
 }
 
@@ -320,22 +276,9 @@ footer a {
     td {
         padding: var(--espacio-sm);
     }
-
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
 }
 
-@media (min-width: 1200px) {
-    .reservas-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-    }
-}
-
-/* 5. FORMULARIO (solo reservas.html) */
+/* 5. FORMULARIO */
 fieldset {
     min-width: 0;
     margin: 0 0 var(--espacio-md);
@@ -345,22 +288,11 @@ fieldset {
 }
 
 legend {
-    padding: 0 var(--espacio-xs);
     font-weight: 600;
 }
 
 fieldset p {
     margin: 0 0 var(--espacio-sm);
-}
-
-.fila-campos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 var(--espacio-md);
-}
-
-.fila-campos p {
-    flex: 1 1 12rem;
 }
 
 input,

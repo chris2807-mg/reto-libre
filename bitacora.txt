@@ -108,3 +108,12 @@ Migré index.html a Bootstrap 5.3: agregué el CSS y el bundle por CDN, con mi s
 En styles.css eliminé las reglas de distribución que inicio ya no usa y marqué con un comentario las que todavía usan tarifas y reservas. Encontré tres conflictos con DevTools: Bootstrap pintaba el cuerpo y las tarjetas con sus colores, 
 que resolví redefiniendo sus variables --bs-* con mis colores; mi regla article afectaba las tarjetas .card, que resolví acotándola a section > article; y la clase .h5 le quitaba la negrita a los títulos, que resolví usando fs-5. 
 Probé inicio a 360, 768 y 1280px y mantuve las fuentes y los colores de marca.
+
+Luego tambien migré tarifas y reservas a Bootstrap 5.3 y dejé las tres páginas con la nueva base: en tarifas ubiqué las tablas y la información complementaria en dos columnas desde lg, y en reservas puse el formulario y el contacto en columnas 8/4 desde md, 
+con documento y celular en una fila de la grilla, conservando todas las reglas de validación nativa. También pasé el encabezado, el pie y el contenedor principal a utilidades de Bootstrap y limpié styles.css, que dejé solo con identidad visual: variables, 
+tipografía, colores, tarjetas, tablas y estados. Con styles.css pasé de 478 líneas en la v1.5 a 338 en la v2.0-beta (140 menos, un 29 %), con 75 reglas contra 50 y 5 @media contra 3
+Como ventajas observadas, 
+la grilla y los breakpoints me ahorraron media queries y la distribución quedó consistente en las tres páginas; como desventajas, el HTML quedó más largo y cargado de clases, dependo de un CDN, perdí control fino como el auto-fit con minmax de la flota, 
+y el reset de Bootstrap chocó con mis estilos (el título de las tablas pasó abajo, los fieldset cambiaron de aspecto y los títulos crecieron), lo que tuve que corregir con reglas propias. En conclusión, Bootstrap sí redujo el trabajo de distribución y la cantidad de CSS
+pero a cambio de revisar y ajustar los choques con mi identidad visual. Revisé las tres páginas a 360, 768 y 1280px, y publiqué la v2.0-beta.
+Cabe aclarar que para esta parte utilice la IA para adaptar la mayoria de las partes y que me ayudara tambien a organizar las columnas para ahorrar tiempo
