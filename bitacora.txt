@@ -123,3 +123,6 @@ controles anterior y siguiente con texto para lectores de pantalla (visually-hid
 
 Hice la página de reservas confiable con Bootstrap: apliqué las clases de formulario a todos los campos, agregué validación visual con mensajes de error específicos por campo usando needs-validation y invalid-feedback, puse una alerta cerrable con el recordatorio del documento original 
 y un modal con las políticas de alquiler que se abre desde un botón junto al checkbox de aceptación. Luego probé que el formulario vacío no se envía, que cada error desaparece al corregirlo y que el modal se cierra con sus botones y con Esc.
+Hice la v2.0 personalizando Bootstrap con la identidad de la marca: sobrescribí en styles.css las variables globales (color primario, enlaces, fuente y radio de bordes), ajusté las variables del botón principal para usar Verde Ruta con hover y active en Naranja Pedal, creé una variante de botón propia para el naranja con texto oscuro 
+y tres clases propias para títulos de sección, pie de página y portada. También agregué Bootstrap Icons en la navbar, los datos de contacto, los beneficios y el botón de WhatsApp, ocultando los decorativos a los lectores de pantalla y dándole aria-label al botón de solo ícono. Por último, revisé que no hubiera !important, que el contraste 
+cumpliera 4.5:1 y que todo funcionara en móvil, tablet y escritorio.

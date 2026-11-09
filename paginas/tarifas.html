@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -21,9 +22,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menu-principal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifas.html">Tarifas y Rutas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifas.html"><i class="bi bi-tag me-1" aria-hidden="true"></i>Tarifas y Rutas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html"><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Reservas</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +35,7 @@
         <div class="row g-4">
             <div class="col-12 col-lg-8">
                 <section>
-                    <h2>Alquiler de bicicletas</h2>
+                    <h2 class="titulo-seccion">Alquiler de bicicletas</h2>
                     <table>
                         <caption>Tarifas de alquiler</caption>
                         <thead>
@@ -71,7 +72,7 @@
                 </section>
 
                 <section id="recorridos">
-                    <h2>Tarifas de recorridos guiados</h2>
+                    <h2 class="titulo-seccion">Tarifas de recorridos guiados</h2>
                     <table>
                         <caption>Distancia, duración, nivel y precio de cada recorrido</caption>
                         <thead>
@@ -109,11 +110,11 @@
                     </table>
                 </section>
 
-                <p><a class="btn btn-success btn-lg" href="reservas.html">Reservar ahora</a></p>
+                <p><a class="btn btn-primary btn-lg" href="reservas.html">Reservar ahora</a></p>
             </div>
             <div class="col-12 col-lg-4">
                 <section>
-                    <h2>Notas importantes</h2>
+                    <h2 class="titulo-seccion">Notas importantes</h2>
                     <p>Todas las tarifas <strong>incluyen casco y candado</strong>.</p>
                     <p>Los recorridos salen <strong>sábados y domingos a las 7:00 a. m.</strong></p>
                     <aside class="border rounded p-3">
@@ -131,20 +132,20 @@
 
         <p><a href="../index.html">Volver a la página principal</a></p>
     </main>
-    <footer class="d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between align-items-start gap-4 px-4 pt-4">
+    <footer class="pie-sitio d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between align-items-start gap-4 px-4 pt-4">
         <p>&copy; Rueda Libre 2026</p>
         <address>
-            <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+            <a href="mailto:hola@ruedalibre.example"><i class="bi bi-envelope me-1" aria-hidden="true"></i>hola@ruedalibre.example</a>
         </address>
         <dl>
-            <dt>Lunes a viernes</dt>
+            <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Lunes a viernes</dt>
             <dd>7:00 a. m. - 7:00 p. m.</dd>
 
-            <dt>Sábados, domingos y festivos</dt>
+            <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Sábados, domingos y festivos</dt>
             <dd>6:00 a. m. - 2:00 p. m.</dd>
         </dl>
     </footer>
-    <a class="btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="btn btn-primary btn-whatsapp position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp (se abre en una pestaña nueva)"><i class="bi bi-whatsapp " aria-hidden="true"></i></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

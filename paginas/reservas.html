@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -21,9 +22,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menu-principal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tarifas.html">Tarifas y Rutas</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifas.html"><i class="bi bi-tag me-1" aria-hidden="true"></i>Tarifas y Rutas</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="reservas.html"><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Reservas</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +35,7 @@
         <div class="row g-4">
             <div class="col-12 col-md-8">
                 <section>
-                    <h2>Formulario de reserva</h2>
+                    <h2 class="titulo-seccion">Formulario de reserva</h2>
                     <div class="alert alert-info alert-dismissible fade show" role="alert">
                         <span class="fw-bold">Recuerda:</span> debes presentar tu documento de identidad original al recoger la bicicleta.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar aviso"></button>
@@ -154,43 +155,43 @@
                                 <label class="form-check-label" for="terminos">Acepto las políticas de alquiler</label>
                                 <div class="invalid-feedback">Debes aceptar las políticas de alquiler para reservar.</div>
                             </div>
-                            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-politicas">Ver políticas</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-politicas">Ver políticas</button>
                         </fieldset>
 
-                        <button class="btn btn-success btn-lg" type="submit" name="reservar">Reservar</button>
+                        <button class="btn btn-primary btn-lg" type="submit" name="reservar">Reservar</button>
                     </form>
                 </section>
             </div>
             <div class="col-12 col-md-4">
                 <aside class="border rounded p-3">
-                    <h2>Contacto</h2>
-                    <p>Contáctanos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a> si tienes dudas.</p>
+                    <h2 class="titulo-seccion">Contacto</h2>
+                    <p><i class="bi bi-envelope me-1" aria-hidden="true"></i>Contáctanos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a> si tienes dudas.</p>
                     <h3>Horario de atención</h3>
                     <dl>
-                        <dt>Lunes a viernes</dt>
+                        <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Lunes a viernes</dt>
                         <dd>7:00 a. m. - 7:00 p. m.</dd>
 
-                        <dt>Sábados, domingos y festivos</dt>
+                        <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Sábados, domingos y festivos</dt>
                         <dd>6:00 a. m. - 2:00 p. m.</dd>
                     </dl>
                 </aside>
             </div>
         </div>
     </main>
-    <footer class="d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between align-items-start gap-4 px-4 pt-4">
+    <footer class="pie-sitio d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between align-items-start gap-4 px-4 pt-4">
         <p>&copy; Rueda Libre 2026</p>
         <address>
-            <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+            <a href="mailto:hola@ruedalibre.example"><i class="bi bi-envelope me-1" aria-hidden="true"></i>hola@ruedalibre.example</a>
         </address>
         <dl>
-            <dt>Lunes a viernes</dt>
+            <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Lunes a viernes</dt>
             <dd>7:00 a. m. - 7:00 p. m.</dd>
 
-            <dt>Sábados, domingos y festivos</dt>
+            <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Sábados, domingos y festivos</dt>
             <dd>6:00 a. m. - 2:00 p. m.</dd>
         </dl>
     </footer>
-    <a class="btn btn-success btn-lg position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="btn btn-primary btn-whatsapp position-fixed bottom-0 end-0 m-3 z-3" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp (se abre en una pestaña nueva)"><i class="bi bi-whatsapp " aria-hidden="true"></i></a>
     <div class="modal fade" id="modal-politicas" tabindex="-1" aria-labelledby="titulo-politicas" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
@@ -208,7 +209,7 @@
                     </ol>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
                 </div>
             </div>
         </div>

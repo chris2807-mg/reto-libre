@@ -19,6 +19,12 @@
     --bs-body-font-family: var(--fuente-texto);
     --bs-link-color-rgb: 30, 122, 79;
     --bs-link-hover-color-rgb: 20, 33, 61;
+    --bs-primary: var(--color-verde-ruta);
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-link-color: var(--color-verde-ruta);
+    --bs-link-hover-color: var(--color-azul-noche);
+    --bs-border-radius: var(--bs-border-radius);
+    --bs-focus-ring-color: rgba(30, 122, 79, 0.25);
     --bs-success-rgb: 30, 122, 79;
     --bs-warning-rgb: 243, 154, 43;
     --bs-dark-rgb: 20, 33, 61;
@@ -106,6 +112,7 @@ textarea:focus {
     width: 100%;
     min-height: 50vh;
     object-fit: cover;
+    border-radius: var(--bs-border-radius);
 }
 
 section > article {
@@ -114,7 +121,7 @@ section > article {
     padding: var(--espacio-md);
     margin-bottom: var(--espacio-md);
     border: 1px solid var(--color-gris-asfalto);
-    border-radius: 0.5rem;
+    border-radius: var(--bs-border-radius);
 }
 
 section > article h3 {
@@ -168,38 +175,77 @@ thead th {
     color: var(--color-crema);
 }
 
-.btn-success {
+/* Botón principal: Verde Ruta; al pasar o presionar, Naranja Pedal con texto oscuro */
+.btn-primary {
+    --bs-btn-color: #fff;
     --bs-btn-bg: var(--color-verde-ruta);
     --bs-btn-border-color: var(--color-verde-ruta);
     --bs-btn-hover-color: var(--color-azul-noche);
     --bs-btn-hover-bg: var(--color-naranja-pedal);
     --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
     --bs-btn-active-color: var(--color-azul-noche);
     --bs-btn-active-bg: var(--color-naranja-pedal);
     --bs-btn-active-border-color: var(--color-naranja-pedal);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--color-verde-ruta);
+    --bs-btn-disabled-border-color: var(--color-verde-ruta);
 }
 
-.btn-outline-success {
+.btn-outline-primary {
     --bs-btn-color: var(--color-verde-ruta);
     --bs-btn-border-color: var(--color-verde-ruta);
     --bs-btn-hover-color: var(--color-azul-noche);
     --bs-btn-hover-bg: var(--color-naranja-pedal);
     --bs-btn-hover-border-color: var(--color-naranja-pedal);
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
     --bs-btn-active-color: var(--color-azul-noche);
     --bs-btn-active-bg: var(--color-naranja-pedal);
     --bs-btn-active-border-color: var(--color-naranja-pedal);
+    --bs-btn-disabled-color: var(--color-verde-ruta);
+    --bs-btn-disabled-border-color: var(--color-verde-ruta);
 }
 
-.btn-warning {
+/* Variante propia: Naranja Pedal con texto Azul Noche (el blanco no cumple el contraste) */
+.btn-pedal {
     --bs-btn-color: var(--color-azul-noche);
     --bs-btn-bg: var(--color-naranja-pedal);
     --bs-btn-border-color: var(--color-naranja-pedal);
     --bs-btn-hover-color: var(--color-azul-noche);
     --bs-btn-hover-bg: var(--color-crema);
     --bs-btn-hover-border-color: var(--color-crema);
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
     --bs-btn-active-color: var(--color-azul-noche);
     --bs-btn-active-bg: var(--color-crema);
     --bs-btn-active-border-color: var(--color-crema);
+    --bs-btn-disabled-color: var(--color-azul-noche);
+    --bs-btn-disabled-bg: var(--color-naranja-pedal);
+    --bs-btn-disabled-border-color: var(--color-naranja-pedal);
+}
+
+/* Botón flotante de WhatsApp: circular, solo ícono */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.75rem;
+}
+
+/* Cierre de las alertas y modales: el anillo de foco azul de Bootstrap pasa a verde */
+.btn-close {
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(30, 122, 79, 0.25);
+}
+
+/* Alerta informativa en colores de marca */
+.alert-info {
+    --bs-alert-color: var(--color-azul-noche);
+    --bs-alert-bg: rgba(30, 122, 79, 0.1);
+    --bs-alert-border-color: rgba(30, 122, 79, 0.4);
+    --bs-alert-link-color: var(--color-azul-noche);
 }
 
 /* Controles del carrusel: Bootstrap les quita el contorno al enfocar
@@ -212,31 +258,62 @@ thead th {
     background-color: rgba(var(--bs-dark-rgb), 0.5);
 }
 
-footer {
-    color: var(--color-gris-asfalto);
-    padding-bottom: var(--espacio-xl);
+/* Clases propias (complementan a Bootstrap sin cambiar sus clases) */
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 0.25rem;
+    margin-top: var(--espacio-xs);
+    border-radius: 0.125rem;
+    background-color: var(--color-naranja-pedal);
 }
 
-footer p,
-footer address,
-footer dl {
+.titulo-seccion.text-center::after {
+    margin-inline: auto;
+}
+
+.icono-beneficio {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-verde-ruta);
+}
+
+.pie-sitio {
+    margin-top: var(--espacio-lg);
+    padding-bottom: var(--espacio-xl);
+    background-color: var(--color-azul-noche);
+    color: var(--color-crema);
+}
+
+.pie-sitio p,
+.pie-sitio address,
+.pie-sitio dl {
     margin: 0;
 }
 
-footer address {
+.pie-sitio address {
     font-style: normal;
 }
 
-footer dd {
+.pie-sitio dd {
     margin-left: 0;
 }
 
-footer dt {
+.pie-sitio dt {
     font-weight: 600;
 }
 
-footer a {
-    color: var(--color-gris-asfalto);
+.pie-sitio a {
+    color: var(--color-naranja-pedal);
+}
+
+.pie-sitio a:hover {
+    color: var(--color-crema);
+}
+
+.pie-sitio a:focus-visible {
+    outline-color: var(--color-naranja-pedal);
 }
 
 @media (min-width: 768px) {
@@ -260,11 +337,23 @@ fieldset {
     margin: 0 0 var(--espacio-md);
     padding: var(--espacio-sm);
     border: 1px solid var(--color-gris-asfalto);
-    border-radius: 0.5rem;
+    border-radius: var(--bs-border-radius);
 }
 
 legend {
     font-weight: 600;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--color-verde-ruta);
+    box-shadow: 0 0 0 0.25rem rgba(30, 122, 79, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--color-verde-ruta);
+    border-color: var(--color-verde-ruta);
 }
 
 @media (min-width: 768px) {
