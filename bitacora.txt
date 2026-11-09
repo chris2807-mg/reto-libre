@@ -90,3 +90,16 @@ En reservas usé Grid con 2fr 1fr para que el formulario ocupe dos tercios y la 
  Mantuve Flexbox en el encabezado y el pie, ya que son bloques que se acomodan en una sola fila con justify-content: space-between.
  Además, agregué un @media para que las columnas pasen a una sola en pantallas pequeñas, y actualicé el formulario de reservas para que ofrezca los mismos 6 tipos de bicicleta de la flota.
  Comprobé que el menú, cabe aclarar que en esta parte utilice la IA para saber cual era mejor usar entre flexbox o grid en la parte del formulario y tambien me ayudo a organizar el codigo
+
+
+ DIA 2
+ Creé la carpeta pruebas/ con la página catalogo-bootstrap.html y le instalé Bootstrap 5.3 por CDN, con el <link> del CSS en el <head> y el <script> del bundle antes de </body>.
+Copié el marcado de la flota, ajusté las rutas de las imágenes con ../ y reconstruí la distribución solo con la grilla: container, row g-3 y col-12 col-sm-6 col-lg-4
+col-xl-3 en cada tarjeta, sin escribir CSS propio ni enlazar styles.css. En modo dispositivo comprobé que la flota muestra una columna en celular, dos desde 576px, tres desde 992px y cuatro desde 1200px,
+ y que en Network el CSS y el JS de Bootstrap cargan sin errores. Al comparar con mi versión en CSS propio, hacer la distribución con Bootstrap me tomó 20 minutos o poco mas una vez que entendi. Mi flota usa 24 líneas de CSS (13 declaraciones,
+6 solo de distribución en .flota-grid), mientras que con Bootstrap usé 7 clases de distribución y 0 líneas de CSS. Utilice la IA para que me ayudara con el archivo y tambien para las comparaciones de lineas 
+
+Construí en la página de pruebas la sección “¿Por qué Rueda Libre?” con cuatro beneficios en la grilla de Bootstrap y, debajo, la franja “¿Listo para rodar?” con un enlace a reservas, sin escribir CSS propio. Para jerarquizar usé utilidades de espacio, 
+tipografía y color, y en la documentación de Bootstrap encontré cinco clases clave: d-none con d-md-block, que oculta el elemento en celular y lo muestra desde md, y que usé para la imagen decorativa; flex-md-row, que cambia la dirección de flex
+a fila desde md y con la que la franja pasa de columna a fila; justify-content-md-between, que separa los elementos de la franja a los extremos desde md; gap-3, que deja un espacio uniforme entre los elementos sin usar márgenes; y text-bg-warning, 
+que da fondo naranja con un texto que se lee bien y que usé para destacar el enlace. em esta parte utilice IA para saber de las clases y remplazar los colores que necesitaba para poder seguir con la paleta de colores
