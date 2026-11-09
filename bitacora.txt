@@ -103,3 +103,8 @@ Construí en la página de pruebas la sección “¿Por qué Rueda Libre?” con
 tipografía y color, y en la documentación de Bootstrap encontré cinco clases clave: d-none con d-md-block, que oculta el elemento en celular y lo muestra desde md, y que usé para la imagen decorativa; flex-md-row, que cambia la dirección de flex
 a fila desde md y con la que la franja pasa de columna a fila; justify-content-md-between, que separa los elementos de la franja a los extremos desde md; gap-3, que deja un espacio uniforme entre los elementos sin usar márgenes; y text-bg-warning, 
 que da fondo naranja con un texto que se lee bien y que usé para destacar el enlace. em esta parte utilice IA para saber de las clases y remplazar los colores que necesitaba para poder seguir con la paleta de colores
+
+Migré index.html a Bootstrap 5.3: agregué el CSS y el bundle por CDN, con mi styles.css cargado después, y reemplacé la distribución de la portada, la flota, las rutas y los beneficios por la grilla y las utilidades, además de la franja final. 
+En styles.css eliminé las reglas de distribución que inicio ya no usa y marqué con un comentario las que todavía usan tarifas y reservas. Encontré tres conflictos con DevTools: Bootstrap pintaba el cuerpo y las tarjetas con sus colores, 
+que resolví redefiniendo sus variables --bs-* con mis colores; mi regla article afectaba las tarjetas .card, que resolví acotándola a section > article; y la clase .h5 le quitaba la negrita a los títulos, que resolví usando fs-5. 
+Probé inicio a 360, 768 y 1280px y mantuve las fuentes y los colores de marca.

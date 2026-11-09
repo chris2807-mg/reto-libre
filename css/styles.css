@@ -12,6 +12,16 @@
     --espacio-md: 1.5rem;
     --espacio-lg: 2.5rem;
     --espacio-xl: 5rem;
+    --bs-body-color: var(--color-azul-noche);
+    --bs-body-bg: var(--color-crema);
+    --bs-heading-color: var(--color-azul-noche);
+    --bs-body-font-family: var(--fuente-texto);
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color-rgb: 20, 33, 61;
+    --bs-success-rgb: 30, 122, 79;
+    --bs-warning-rgb: 243, 154, 43;
+    --bs-dark-rgb: 20, 33, 61;
+    --bs-light-rgb: 250, 246, 239;
 }
 
 /* 2. BASE */
@@ -141,37 +151,14 @@ header {
 }
 
 /* 4. COMPONENTES */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacio-md);
-}
-
-.hero-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--espacio-md);
-}
-
-.hero-texto h2,
-.hero-texto p {
-    margin: 0;
-}
-
 .portada {
     display: block;
     width: 100%;
     min-height: 50vh;
     object-fit: cover;
-    margin-bottom: var(--espacio-lg);
 }
 
-.hero .portada {
-    margin-bottom: 0;
-}
-
-article {
+section > article {
     position: relative;
     width: 100%;
     padding: var(--espacio-md);
@@ -180,11 +167,11 @@ article {
     border-radius: 0.5rem;
 }
 
-article h3 {
+section > article h3 {
     margin-top: 0;
 }
 
-article img {
+section > article img {
     display: block;
     width: 100%;
 }
@@ -200,6 +187,7 @@ article img {
     font-weight: 600;
 }
 
+/* Solo tarifas.html: tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -261,47 +249,7 @@ thead th {
     outline-offset: 0.2rem;
 }
 
-.flota-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: var(--espacio-md);
-    align-items: stretch;
-}
-
-.flota-grid article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0;
-}
-
-.flota-grid img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    margin-bottom: var(--espacio-sm);
-}
-
-.flota-grid .btn-cta {
-    margin-top: var(--espacio-sm);
-    text-align: center;
-}
-
-.rutas-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espacio-md);
-}
-
-.rutas-grid article {
-    margin-bottom: 0;
-}
-
-.rutas-grid img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    margin-bottom: var(--espacio-sm);
-}
-
+/* Solo reservas.html: distribucion 2:1 */
 .reservas-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -360,15 +308,6 @@ footer a {
 }
 
 @media (min-width: 768px) {
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--espacio-lg);
-    }
-
-    .rutas-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     table {
         font-size: 1rem;
     }
@@ -396,7 +335,7 @@ footer a {
     }
 }
 
-/* 5. FORMULARIO */
+/* 5. FORMULARIO (solo reservas.html) */
 fieldset {
     min-width: 0;
     margin: 0 0 var(--espacio-md);
