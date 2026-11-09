@@ -117,3 +117,9 @@ la grilla y los breakpoints me ahorraron media queries y la distribución quedó
 y el reset de Bootstrap chocó con mis estilos (el título de las tablas pasó abajo, los fieldset cambiaron de aspecto y los títulos crecieron), lo que tuve que corregir con reglas propias. En conclusión, Bootstrap sí redujo el trabajo de distribución y la cantidad de CSS
 pero a cambio de revisar y ajustar los choques con mi identidad visual. Revisé las tres páginas a 360, 768 y 1280px, y publiqué la v2.0-beta.
 Cabe aclarar que para esta parte utilice la IA para adaptar la mayoria de las partes y que me ayudara tambien a organizar las columnas para ahorrar tiempo
+
+Revisé que la flota y las rutas ya usaban card dentro de la grilla, con h-100 para que las cards de una fila midan lo mismo y el botón quede al final. Agregué en inicio la sección "Promociones del mes" con un carrusel de Bootstrap: tres diapositivas con imagen (con alt) y el texto de la promoción, 
+controles anterior y siguiente con texto para lectores de pantalla (visually-hidden) y avance automático con data-bs-ride. Bootstrap quita el contorno de los controles al enfocarlos, así que agregué una regla de foco visible para el teclado. Revisé styles.css y no quedaban reglas de tarjetas sin uso. 
+
+Hice la página de reservas confiable con Bootstrap: apliqué las clases de formulario a todos los campos, agregué validación visual con mensajes de error específicos por campo usando needs-validation y invalid-feedback, puse una alerta cerrable con el recordatorio del documento original 
+y un modal con las políticas de alquiler que se abre desde un botón junto al checkbox de aceptación. Luego probé que el formulario vacío no se envía, que cada error desaparece al corregirlo y que el modal se cierra con sus botones y con Esc.
