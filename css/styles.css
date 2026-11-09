@@ -202,6 +202,16 @@ thead th {
     --bs-btn-active-border-color: var(--color-crema);
 }
 
+/* Controles del carrusel: Bootstrap les quita el contorno al enfocar
+   (outline: 0), así que se devuelve un indicador visible para quien
+   navega con teclado */
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: -0.25rem;
+    background-color: rgba(var(--bs-dark-rgb), 0.5);
+}
+
 footer {
     color: var(--color-gris-asfalto);
     padding-bottom: var(--espacio-xl);
